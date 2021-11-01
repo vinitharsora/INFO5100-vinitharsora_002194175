@@ -4,19 +4,15 @@
  * and open the template in the editor.
  */
 package ui;
-
-/**
- *
- * @author vinithiteshharsora
- */
-
-
 import javax.swing.table.DefaultTableModel;
 import model.EncounterHistory;
 import model.Patient;
 import model.PatientDirectory;
 import model.PersonDirectory;
-
+/**
+ *
+ * @author vinithiteshharsora
+ */
 
 public class viewAbnormalCases extends javax.swing.JPanel {
 

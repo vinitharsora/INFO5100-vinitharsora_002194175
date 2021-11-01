@@ -4,12 +4,6 @@
  * and open the template in the editor.
  */
 package ui;
-
-/**
- *
- * @author vinithiteshharsora
- */
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
@@ -19,6 +13,10 @@ import model.Patient;
 import model.PatientDirectory;
 import model.Person;
 import model.PersonDirectory;
+/**
+ *
+ * @author vinithiteshharsora
+ */
 
 public class viewPersonDirectory extends javax.swing.JPanel {
 
@@ -253,14 +251,13 @@ public class viewPersonDirectory extends javax.swing.JPanel {
                                 .addGap(30, 30, 30)
                                 .addComponent(btnSaveEdit))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(lblAge)
-                                        .addComponent(lblCommunity)
-                                        .addComponent(lblCity)
-                                        .addComponent(lblHouse)
-                                        .addComponent(lblLname))
-                                    .addComponent(lblFname))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(lblAge, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblCommunity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblCity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblHouse, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblLname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblFname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(comboCommunity, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -357,7 +354,7 @@ public class viewPersonDirectory extends javax.swing.JPanel {
                 .addGap(15, 15, 15))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {lblage, lblfname, lblhouseno, lbllname, txtAge, txtCity, txtFname, txtHouse, txtLname});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {comboCommunity, lblAge, lblCity, lblCommunity, lblFname, lblHouse, lblLname, lblage, lblfname, lblhouseno, lbllname, txtAge, txtCity, txtFname, txtHouse, txtLname});
 
     }// </editor-fold>//GEN-END:initComponents
 
@@ -382,7 +379,7 @@ public class viewPersonDirectory extends javax.swing.JPanel {
             patient.setPatientid(getUniqueId());
             patientDirectory.addNewPatient(patient);
             System.out.println(patient.getPatientid());
-            JOptionPane.showMessageDialog(this, "Appointment Confirmed");
+            JOptionPane.showMessageDialog(this, "Please fill the missing details !");
         }
         else{
             JOptionPane.showMessageDialog(this, "Appointment Confirmed");
@@ -392,15 +389,6 @@ public class viewPersonDirectory extends javax.swing.JPanel {
 
     private void btnAddPersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddPersonActionPerformed
         // TODO add your handling code here:
-        if(txtAge.getText().isBlank() || txtAge.getText().isEmpty()
-            ||txtCity.getText().isBlank() || txtCity.getText().isEmpty()
-            ||txtFname.getText().isBlank() || txtFname.getText().isEmpty()
-            ||txtLname.getText().isBlank() || txtLname.getText().isEmpty()
-            ||txtHouse.getText().isBlank() || txtHouse.getText().isEmpty()
-        ){
-            JOptionPane.showMessageDialog(this, "Fields cannot be blank ");
-
-        }
 
         Person person = new Person();
         person.setPersonage(Integer.parseInt(txtAge.getText()));
@@ -414,13 +402,25 @@ public class viewPersonDirectory extends javax.swing.JPanel {
         System.out.println(viPersonDirectory.getPersonList().get(0).toString());
 
         populateTable();
+                if(txtAge.getText().isBlank() || txtAge.getText().isEmpty()
+            || txtCity.getText().isBlank() || txtCity.getText().isEmpty()
+           || txtFname.getText().isBlank() || txtFname.getText().isEmpty()
+            || txtLname.getText().isBlank() || txtLname.getText().isEmpty()
+            || txtHouse.getText().isBlank() || txtHouse.getText().isEmpty()
+        ){
+            JOptionPane.showMessageDialog(this, "Please enter all fields ! ");
+
+        }
+                
+            txtAge.setText("");
+            txtFname.setText("");
+            txtLname.setText("");
+            txtCity.setText("");
+            txtHouse.setText("");
+            comboCommunity.setSelectedItem("");
+          {
         JOptionPane.showMessageDialog(this, "Person Details Added Successfully");
-        txtAge.setText("");
-        txtFname.setText("");
-        txtLname.setText("");
-        txtCity.setText("");
-        txtHouse.setText("");
-        comboCommunity.setSelectedItem("");
+        }
     }//GEN-LAST:event_btnAddPersonActionPerformed
 
     private void comboCommunityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboCommunityActionPerformed
@@ -451,7 +451,7 @@ public class viewPersonDirectory extends javax.swing.JPanel {
             ||txtHouse.getText().isBlank() || txtHouse.getText().isEmpty()
 
         ){
-            JOptionPane.showMessageDialog(this, "Fields cannot be blank ");
+            JOptionPane.showMessageDialog(this, "Please enter all fields !");
 
         }
         int selectedRowIndex = viewPersonTable.getSelectedRow();

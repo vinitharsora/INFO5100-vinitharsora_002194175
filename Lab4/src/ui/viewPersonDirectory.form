@@ -35,15 +35,13 @@
                               <Component id="btnSaveEdit" linkSize="2" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                      <Component id="lblAge" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblCommunity" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblCity" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblHouse" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblLname" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="lblFname" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="lblAge" linkSize="1" max="32767" attributes="0"/>
+                                  <Component id="lblCommunity" linkSize="1" max="32767" attributes="0"/>
+                                  <Component id="lblCity" linkSize="1" max="32767" attributes="0"/>
+                                  <Component id="lblHouse" linkSize="1" max="32767" attributes="0"/>
+                                  <Component id="lblLname" linkSize="1" max="32767" attributes="0"/>
+                                  <Component id="lblFname" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -106,7 +104,7 @@
                           <Component id="lblfname" linkSize="7" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="txtFname" linkSize="7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblFname" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblFname" linkSize="7" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -124,7 +122,7 @@
                   <Component id="lbllname" linkSize="7" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txtLname" linkSize="7" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblLname" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblLname" linkSize="7" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
@@ -132,24 +130,24 @@
                   <Component id="lblage" linkSize="7" alignment="0" min="-2" pref="29" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txtAge" linkSize="7" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblAge" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblAge" linkSize="7" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblCommunity" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="comboCommunity" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblCommunity" linkSize="7" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="comboCommunity" linkSize="7" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblCity" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblCity" linkSize="7" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtCity" linkSize="7" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="lblhouseno" linkSize="7" alignment="0" min="-2" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblHouse" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblHouse" linkSize="7" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtHouse" linkSize="7" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>

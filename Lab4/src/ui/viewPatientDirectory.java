@@ -4,12 +4,6 @@
  * and open the template in the editor.
  */
 package ui;
-
-/**
- *
- * @author vinithiteshharsora
- */
-
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -19,8 +13,12 @@ import model.Encounter;
 import model.EncounterHistory;
 import model.Patient;
 import model.PatientDirectory;
+import model.Person;
 import model.VitalSign;
-
+/**
+ *
+ * @author vinithiteshharsora
+ */
 
 public class viewPatientDirectory extends javax.swing.JPanel {
 
@@ -65,6 +63,7 @@ public class viewPatientDirectory extends javax.swing.JPanel {
         lblBloodError = new javax.swing.JLabel();
         lblRespiratoryRateError = new javax.swing.JLabel();
         jPatientDatabase = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 204, 255));
 
@@ -191,6 +190,16 @@ public class viewPatientDirectory extends javax.swing.JPanel {
         jPatientDatabase.setForeground(new java.awt.Color(153, 153, 0));
         jPatientDatabase.setText("Patient Details");
 
+        jButton1.setBackground(new java.awt.Color(153, 204, 0));
+        jButton1.setFont(new java.awt.Font("Didot", 3, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(153, 153, 0));
+        jButton1.setText("Cancel Appointment");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -202,8 +211,10 @@ public class viewPatientDirectory extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 626, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton1)
+                                .addGap(20, 20, 20)
                                 .addComponent(btnViewHistory)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(20, 20, 20)
                                 .addComponent(btnAddVitals))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -239,6 +250,8 @@ public class viewPatientDirectory extends javax.swing.JPanel {
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lblBloodError, lblRespiratoryRateError});
 
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAddVitals, btnViewHistory, jButton1});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -249,7 +262,8 @@ public class viewPatientDirectory extends javax.swing.JPanel {
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAddVitals)
-                    .addComponent(btnViewHistory))
+                    .addComponent(btnViewHistory)
+                    .addComponent(jButton1))
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblPatientID)
@@ -279,6 +293,8 @@ public class viewPatientDirectory extends javax.swing.JPanel {
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {lblBloodError, lblBloodPressure, lblRespiratoryRate, lblRespiratoryRateError, txtBloodPressure, txtRespiratoryRate});
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {lblPatientID, lblTxtPatID});
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnViewHistory, jButton1});
 
     }// </editor-fold>//GEN-END:initComponents
 
@@ -394,11 +410,23 @@ public class viewPatientDirectory extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtBloodPressureActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        int selectedRowIndex = tblPatientDirectory.getSelectedRow();
+        DefaultTableModel model = (DefaultTableModel) tblPatientDirectory.getModel();
+        System.out.println(model.getValueAt(selectedRowIndex, 0));
+        Patient patient = (Patient) model.getValueAt(selectedRowIndex , 0);
+        patientDirectory.getPatientList().remove(selectedRowIndex);
+        populateTable();
+        JOptionPane.showMessageDialog(this, "Appointment Cancelled !");
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddVitals;
     private javax.swing.JButton btnSaveDetails;
     private javax.swing.JButton btnViewHistory;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jPatientDatabase;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

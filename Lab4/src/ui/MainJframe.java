@@ -5,11 +5,6 @@
  */
 package ui;
 
-/**
- *
- * @author vinithiteshharsora
- */
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -20,6 +15,10 @@ import model.EncounterHistory;
 import model.Person;
 import model.PersonDirectory;
 import model.PatientDirectory;
+/**
+ *
+ * @author vinithiteshharsora
+ */
 
 
 public class MainJframe extends javax.swing.JFrame {
@@ -199,6 +198,9 @@ public class MainJframe extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MainJframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
