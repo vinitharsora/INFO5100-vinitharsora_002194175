@@ -379,17 +379,26 @@ public class viewPersonDirectory extends javax.swing.JPanel {
             patient.setPatientid(getUniqueId());
             patientDirectory.addNewPatient(patient);
             System.out.println(patient.getPatientid());
-            JOptionPane.showMessageDialog(this, "Please fill the missing details !");
+            JOptionPane.showMessageDialog(this, "Appointment Confirmed ");
         }
         else{
-            JOptionPane.showMessageDialog(this, "Appointment Confirmed");
+            JOptionPane.showMessageDialog(this, "Appointment Confirmed ");
         }
 
     }//GEN-LAST:event_btnBookAppointmentActionPerformed
 
     private void btnAddPersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddPersonActionPerformed
         // TODO add your handling code here:
+                   if(txtAge.getText().isBlank() || txtAge.getText().isEmpty()
+            || txtCity.getText().isBlank() || txtCity.getText().isEmpty()
+           || txtFname.getText().isBlank() || txtFname.getText().isEmpty()
+            || txtLname.getText().isBlank() || txtLname.getText().isEmpty()
+            || txtHouse.getText().isBlank() || txtHouse.getText().isEmpty()
+        ){
+            JOptionPane.showMessageDialog(this, "Please enter all fields ! ");
 
+        }
+                   else{          
         Person person = new Person();
         person.setPersonage(Integer.parseInt(txtAge.getText()));
         person.setPersoncityname(txtCity.getText());
@@ -402,15 +411,7 @@ public class viewPersonDirectory extends javax.swing.JPanel {
         System.out.println(viPersonDirectory.getPersonList().get(0).toString());
 
         populateTable();
-                if(txtAge.getText().isBlank() || txtAge.getText().isEmpty()
-            || txtCity.getText().isBlank() || txtCity.getText().isEmpty()
-           || txtFname.getText().isBlank() || txtFname.getText().isEmpty()
-            || txtLname.getText().isBlank() || txtLname.getText().isEmpty()
-            || txtHouse.getText().isBlank() || txtHouse.getText().isEmpty()
-        ){
-            JOptionPane.showMessageDialog(this, "Please enter all fields ! ");
-
-        }
+     
                 
             txtAge.setText("");
             txtFname.setText("");
@@ -422,7 +423,7 @@ public class viewPersonDirectory extends javax.swing.JPanel {
         JOptionPane.showMessageDialog(this, "Person Details Added Successfully");
         }
     }//GEN-LAST:event_btnAddPersonActionPerformed
-
+    }
     private void comboCommunityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboCommunityActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_comboCommunityActionPerformed
@@ -453,7 +454,7 @@ public class viewPersonDirectory extends javax.swing.JPanel {
         ){
             JOptionPane.showMessageDialog(this, "Please enter all fields !");
 
-        }
+        }else{
         int selectedRowIndex = viewPersonTable.getSelectedRow();
         DefaultTableModel model = (DefaultTableModel) viewPersonTable.getModel();
         System.out.println(model.getValueAt(selectedRowIndex, 0));
@@ -472,7 +473,7 @@ public class viewPersonDirectory extends javax.swing.JPanel {
         txtCity.setText("");
         txtHouse.setText("");
         comboCommunity.setSelectedItem("");
-
+        }
     }//GEN-LAST:event_btnSaveEditActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed

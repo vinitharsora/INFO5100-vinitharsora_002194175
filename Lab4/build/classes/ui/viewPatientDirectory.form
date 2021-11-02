@@ -46,7 +46,7 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="lblRespiratoryRate" linkSize="1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="txtRespiratoryRate" linkSize="2" min="-2" pref="80" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="btnSaveDetails" alignment="0" min="-2" pref="194" max="-2" attributes="0"/>
