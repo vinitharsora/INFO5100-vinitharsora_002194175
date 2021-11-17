@@ -410,6 +410,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtName">
       <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNameActionPerformed"/>
         <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtNameKeyReleased"/>
       </Events>
     </Component>
@@ -420,6 +421,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtDateofbirth">
       <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDateofbirthActionPerformed"/>
         <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtDateofbirthKeyReleased"/>
       </Events>
     </Component>
@@ -468,17 +470,18 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtInternetprotocoladdresses">
     </Component>
-    <Component class="javax.swing.JTextField" name="txtnuid">
-      <Events>
-        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtnuidKeyReleased"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JButton" name="btnSaveImage">
       <Properties>
         <Property name="text" type="java.lang.String" value="Upload"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSaveImageActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtnuid">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtnuidActionPerformed"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtnuidKeyReleased"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jName">

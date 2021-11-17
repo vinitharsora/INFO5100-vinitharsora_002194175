@@ -21,3 +21,18 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/Lab2/nbproject/private/
+/Lab2/build/
+/Lab4/nbproject/private/
+/Lab4.1/nbproject/private/
+/Lab4_VitalSigns/nbproject/private/
+/JavaApplication12/nbproject/private/
+/JavaApplication13/nbproject/private/
+/Lab5/nbproject/private/
+/Lab4AED/nbproject/private/
+/Lab4AED/build/
+/db4odemo/nbproject/private/
+/db4odemo/build/
+/Lab5/build/
+/db4odemo 2/nbproject/private/
+/db4odemo 2/build/

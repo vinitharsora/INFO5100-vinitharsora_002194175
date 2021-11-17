@@ -74,8 +74,8 @@ public class CreateJPanel extends javax.swing.JPanel {
         txtDeviceidentifiers = new javax.swing.JTextField();
         txtLinkedin = new javax.swing.JTextField();
         txtInternetprotocoladdresses = new javax.swing.JTextField();
-        txtnuid = new javax.swing.JTextField();
         btnSaveImage = new javax.swing.JButton();
+        txtnuid = new javax.swing.JTextField();
         jName = new javax.swing.JLabel();
         jGeographicalData = new javax.swing.JLabel();
         jDOB = new javax.swing.JLabel();
@@ -172,6 +172,11 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
+        txtName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNameActionPerformed(evt);
+            }
+        });
         txtName.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtNameKeyReleased(evt);
@@ -184,6 +189,11 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
+        txtDateofbirth.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDateofbirthActionPerformed(evt);
+            }
+        });
         txtDateofbirth.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtDateofbirthKeyReleased(evt);
@@ -232,16 +242,21 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
-        txtnuid.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtnuidKeyReleased(evt);
-            }
-        });
-
         btnSaveImage.setText("Upload");
         btnSaveImage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveImageActionPerformed(evt);
+            }
+        });
+
+        txtnuid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtnuidActionPerformed(evt);
+            }
+        });
+        txtnuid.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtnuidKeyReleased(evt);
             }
         });
 
@@ -573,21 +588,11 @@ public class CreateJPanel extends javax.swing.JPanel {
         chooser.showOpenDialog(null);
         File f = chooser.getSelectedFile();
         String filename = f.getAbsolutePath();
-//        lblImage.setText(filename);
+
         ImageIcon image = new ImageIcon(filename);
         product.setImage(image);
       
-//        
-//        int image;
-//        JFileChooser uploadImage = new JFileChooser();
-//        image = uploadImage.showSaveDialog(null);
-//        if(image == JFileChooser.APPROVE_OPTION) {
-//            File currentImage = uploadImage.getSelectedFile();
-//            product.setImage(currentImage);
-////             Get image name;
-//            String[] validatedImageName = currentImage.toString().split("/");
-//            product.setImage((uploadImage.getSelectedFile()));
-//        }  
+  
     }//GEN-LAST:event_btnSaveImageActionPerformed
 
     private void txtNameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNameKeyReleased
@@ -750,6 +755,18 @@ public class CreateJPanel extends javax.swing.JPanel {
             jSSN.setText("");
         }
     }//GEN-LAST:event_txtSocialSecuritynumberKeyReleased
+
+    private void txtDateofbirthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDateofbirthActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDateofbirthActionPerformed
+
+    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNameActionPerformed
+
+    private void txtnuidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnuidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtnuidActionPerformed
 
     
     //Health plan number

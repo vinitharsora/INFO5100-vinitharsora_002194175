@@ -355,6 +355,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         car.setCurrentlyAvailableCars(Integer.parseInt(txtCurrentlyAvailableCars.getText()));
         car.setYearOfManufacturing(Integer.parseInt(txtYearOfManufacturing.getText()));
         car.setMinimumSeats(Integer.parseInt(txtMinimumSeats.getText()));
+        
         car.setSerialNumber(txtSerialNumber.getText());
         car.setModelNumber(txtModelNumber.getText());
         car.setManufacturer(txtManufacturer.getText());
