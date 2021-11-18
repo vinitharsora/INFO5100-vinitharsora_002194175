@@ -36,3 +36,7 @@ hs_err_pid*
 /Lab5/build/
 /db4odemo 2/nbproject/private/
 /db4odemo 2/build/
+/db4odemo 2/dist/
+/db4odemo/dist/
+/Lab5/dist/
+/Test/nbproject/private/
