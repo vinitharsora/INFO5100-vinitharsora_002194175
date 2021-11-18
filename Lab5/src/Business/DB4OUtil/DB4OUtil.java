@@ -62,6 +62,8 @@ public class DB4OUtil {
     
     public EcoSystem retrieveSystem(){
         ObjectContainer conn = createConnection();
+        try 
+        {
         ObjectSet<EcoSystem> systems = conn.query(EcoSystem.class); // Change to the object you want to save
         EcoSystem system;
         if (systems.size() == 0){
@@ -73,4 +75,10 @@ public class DB4OUtil {
         conn.close();
         return system;
     }
+                catch(Exception e)
+        {
+            System.out.println("Error : " + e.getMessage());
+        }
+        return null;
+}
 }
